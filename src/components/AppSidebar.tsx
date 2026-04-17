@@ -57,7 +57,7 @@ export function AppSidebar() {
               {main.map((item) => (
                 <SidebarMenuItem key={item.url}>
                   <SidebarMenuButton asChild>
-                    <NavLink to={item.url} className={({ isActive }: any) => cls(isActive)}>
+                    <NavLink to={item.url} className={baseCls} activeClassName={activeCls}>
                       <item.icon className="h-4 w-4 shrink-0" />
                       {!collapsed && <span>{item.title}</span>}
                     </NavLink>
@@ -75,7 +75,7 @@ export function AppSidebar() {
               {tools.map((item) => (
                 <SidebarMenuItem key={item.url}>
                   <SidebarMenuButton asChild>
-                    <NavLink to={item.url} className={({ isActive }: any) => cls(isActive)}>
+                    <NavLink to={item.url} className={baseCls} activeClassName={activeCls}>
                       <item.icon className="h-4 w-4 shrink-0" />
                       {!collapsed && <span>{item.title}</span>}
                     </NavLink>
@@ -92,7 +92,7 @@ export function AppSidebar() {
               {bottom.map((item) => (
                 <SidebarMenuItem key={item.url}>
                   <SidebarMenuButton asChild>
-                    <NavLink to={item.url} className={({ isActive }: any) => cls(isActive)}>
+                    <NavLink to={item.url} className={baseCls} activeClassName={activeCls}>
                       <item.icon className="h-4 w-4 shrink-0" />
                       {!collapsed && <span>{item.title}</span>}
                     </NavLink>
